@@ -1,30 +1,30 @@
 "use client";
-import React from 'react';
-import Navbar from '../Components/page'; // ganti path sesuai lokasi Navbar.js
+import React from "react";
+import Navbar from "../Components/page";
 
 export default function LayananKami() {
   const layanan = [
     {
-      title: 'Pemeriksaan Kesehatan',
-      image: 'https://via.placeholder.com/300x200/87CEFA/000000?text=Health',
+      title: "Pemeriksaan Kesehatan",
+      image: "https://via.placeholder.com/300x200/87CEFA/000000?text=Health",
     },
     {
-      title: 'Grooming',
-      image: 'https://via.placeholder.com/300x200/FFD700/000000?text=Grooming',
+      title: "Grooming",
+      image: "https://via.placeholder.com/300x200/FFD700/000000?text=Grooming",
     },
     {
-      title: 'Vaksinasi',
-      image: 'https://via.placeholder.com/300x200/FFA500/000000?text=Vaksin',
+      title: "Vaksinasi",
+      image: "https://via.placeholder.com/300x200/FFA500/000000?text=Vaksin",
     },
     {
-      title: 'PetHotel',
-      image: 'https://via.placeholder.com/300x200/98FB98/000000?text=PetHotel',
+      title: "PetHotel",
+      image: "https://via.placeholder.com/300x200/98FB98/000000?text=PetHotel",
     },
   ];
 
   return (
     <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-gray-300 to-gray-200 px-4 py-10">
-            <Navbar />
+      <Navbar />
 
       <h2 className="text-center text-4xl font-bold text-gray-800 mb-12">
         LAYANAN <span className="text-orange-500">KAMI</span>
@@ -46,8 +46,12 @@ export default function LayananKami() {
               </span>
             </div>
             <div className="p-5 text-center min-h-[140px] flex flex-col justify-center">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-600">Sayangi hewan Anda, seperti Anda menyayangi manusia.</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {item.title}
+              </h3>
+              <p className="text-sm text-gray-600">
+                Sayangi hewan Anda, seperti Anda menyayangi manusia.
+              </p>
             </div>
           </div>
         ))}

@@ -22,6 +22,17 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/page.jsx", "src/app/layout.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/page.jsx",
+    "src/app/layout.tsx",
+    "src/app/Components/Footer/page.jsx",
+    "src/app/Pages/Signin/page.jsx",
+    "src/app/Pages/Login/page.jsx",
+    "src/app/Pages/Clinicpages/H2/page.jsx"
+  ],
   "exclude": ["node_modules"]
 }

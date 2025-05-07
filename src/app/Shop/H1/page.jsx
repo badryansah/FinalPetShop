@@ -112,15 +112,15 @@ export default function ShopByPetPage() {
   return (
     <div className="min-h-screen flex flex-col overflow-y-auto bg-gray-50">
       {/* Header */}
-      <div className="sticky top-0 bg-white z-30 px-4 py-4 shadow-sm">
+      <div className="sticky top-0 bg-white z-30 px-4 py-4 shadow-sm ">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-            className="text-2xl hover:text-orange-500 transition-colors"
+            className="text-2xl hover:text-orange-500 transition-colors text-black"
           >
             ☰
           </button>
-          <h1 className="text-3xl font-bold">Shop by pet</h1>
+          <h1 className="text-3xl font-bold text-black">Shop by pet</h1>
           <button className="text-2xl">🛒</button>
         </div>
       </div>
@@ -153,29 +153,39 @@ export default function ShopByPetPage() {
         <div className="flex-1 max-w-7xl mx-auto px-4 py-8 w-full">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {/* Products Grid */}
-            <div className="col-span-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="col-span-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-black">
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="bg-white rounded-lg p-4 shadow-sm"
+                  className="product-card bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow text-black"
                 >
-                  <div className="relative">
+                  <div className="product-image-container relative">
                     <Image
                       src={product.image}
                       alt={product.name}
                       width={200}
                       height={200}
-                      className="w-full h-48 object-contain"
+                      className="product-image w-full h-48 object-contain"
                     />
-                    <button className="absolute top-2 right-2 text-orange-500">
+                    {product.isNew && (
+                      <span className="product-badge absolute top-2 left-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">
+                        New
+                      </span>
+                    )}
+                    <button className="product-favorite absolute top-2 right-2 text-orange-500 hover:scale-110 transition-transform">
                       ♡
                     </button>
                   </div>
-                  <div className="mt-4">
-                    <h3 className="text-sm font-medium">{product.name}</h3>
-                    <p className="text-gray-900 font-semibold">
+                  <div className="product-info mt-4 space-y-1">
+                    <h3 className="product-name text-sm font-medium line-clamp-2 text-black">
+                      {product.name}
+                    </h3>
+                    <p className="product-price text-black font-semibold ">
                       ${product.price}
                     </p>
+                    <button className="product-add-cart w-full mt-2 bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
               ))}

@@ -27,58 +27,58 @@ export default function ShopPageTwo() {
       id: 19,
       name: "Premium Dog Food",
       price: "19.99",
-      image: "/images/products/placeholder.png",
+      image: "/images/products/gray-placeholder.png",
     },
     {
       id: 20,
       name: "Premium Dog Food",
       price: "19.99",
-      image: "/images/products/placeholder.png",
+      image: "/images/products/gray-placeholder.png",
     },
     {
       id: 21,
       name: "Premium Cat Food",
       price: "19.99",
-      image: "/images/products/placeholder.png",
+      image: "/images/products/gray-placeholder.png",
     },
     {
       id: 22,
       name: "Premium Dog Food",
       price: "19.99",
-      image: "/images/products/placeholder.png",
+      image: "/images/products/gray-placeholder.png",
     },
     {
       id: 23,
       name: "Premium Dog Food",
       price: "19.99",
-      image: "/images/products/placeholder.png",
+      image: "/images/products/gray-placeholder.png",
     },
     {
       id: 24,
       name: "Premium Cat Food",
       price: "19.99",
-      image: "/images/products/placeholder.png",
+      image: "/images/products/gray-placeholder.png",
     },
     {
       id: 25,
       name: "Premium Dog Food",
       price: "19.99",
-      image: "/images/products/placeholder.png",
+      image: "/images/products/gray-placeholder.png",
     },
   ];
 
   return (
     <div className="min-h-screen flex flex-col overflow-y-auto bg-gray-50">
       {/* Header */}
-      <div className="sticky top-0 bg-white z-30 px-4 py-4 shadow-sm">
+      <div className="sticky top-0 bg-white z-30 px-4 py-4 shadow-sm ">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-            className="text-2xl hover:text-orange-500 transition-colors"
+            className="text-2xl hover:text-orange-500 transition-colors text-black"
           >
             ☰
           </button>
-          <h1 className="text-3xl font-bold">Shop by pet</h1>
+          <h1 className="text-3xl font-bold text-black">Shop by pet</h1>
           <button className="text-2xl">🛒</button>
         </div>
       </div>

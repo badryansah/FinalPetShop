@@ -1,6 +1,6 @@
 import React from "react";
 // import Home from "./Pages/Signin/page";
-import Home from "./Shop/H1/page";
+import Home from "./Pages/Signin/page";
 
 function page() {
   return (

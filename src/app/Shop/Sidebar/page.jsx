@@ -50,12 +50,14 @@ export default function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
   ];
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white text-black">
       {/* Sidebar Content */}
       <div className="p-4">
         {/* Filter by Categories */}
         <div className="mb-6">
-          <h3 className="font-semibold mb-3">Filter by categories</h3>
+          <h3 className="font-semibold mb-3 text-black">
+            Filter by categories
+          </h3>
           {categories.map((category) => (
             <div
               key={category.name}
@@ -66,16 +68,16 @@ export default function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
                   type="checkbox"
                   className="form-checkbox h-4 w-4 text-orange-500"
                 />
-                <span className="ml-2 text-gray-600">{category.name}</span>
+                <span className="ml-2 text-black">{category.name}</span>
               </label>
-              <span className="text-gray-400 text-sm">({category.count})</span>
+              <span className="text-black text-sm">({category.count})</span>
             </div>
           ))}
         </div>
 
         {/* Filter by Price */}
         <div className="mb-6">
-          <h3 className="font-semibold mb-3">Filter by Price</h3>
+          <h3 className="font-semibold mb-3 text-black">Filter by Price</h3>
           <div className="px-2">
             <input
               type="range"
@@ -88,7 +90,7 @@ export default function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
               className="w-full h-2 bg-orange-200 rounded-lg appearance-none cursor-pointer"
             />
             <div className="flex justify-between mt-2">
-              <span className="text-gray-600">
+              <span className="text-black">
                 Price: ${priceRange[0]} - ${priceRange[1]}
               </span>
             </div>
@@ -100,7 +102,7 @@ export default function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
 
         {/* Filter by Brands */}
         <div className="mb-6">
-          <h3 className="font-semibold mb-3">Filter by brands</h3>
+          <h3 className="font-semibold mb-3 text-black">Filter by brands</h3>
           {brands.map((brand) => (
             <div
               key={brand.name}
@@ -111,21 +113,21 @@ export default function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
                   type="checkbox"
                   className="form-checkbox h-4 w-4 text-orange-500"
                 />
-                <span className="ml-2 text-gray-600">{brand.name}</span>
+                <span className="ml-2 text-black">{brand.name}</span>
               </label>
-              <span className="text-gray-400 text-sm">({brand.count})</span>
+              <span className="text-black text-sm">({brand.count})</span>
             </div>
           ))}
         </div>
 
         {/* Filter by Tags */}
         <div className="mb-6">
-          <h3 className="font-semibold mb-3">Filter by tags</h3>
+          <h3 className="font-semibold mb-3 text-black">Filter by tags</h3>
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
               <button
                 key={tag}
-                className="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-600"
+                className="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-black"
               >
                 {tag}
               </button>
@@ -135,7 +137,7 @@ export default function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
 
         {/* Popular Products */}
         <div>
-          <h3 className="font-semibold mb-3">Popular products</h3>
+          <h3 className="font-semibold mb-3 text-black">Popular products</h3>
           <div className="space-y-4">
             {popularProducts.map((product) => (
               <div key={product.name} className="flex items-center gap-3">
@@ -149,8 +151,10 @@ export default function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
                   />
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium">{product.name}</h4>
-                  <p className="text-sm text-gray-600">
+                  <h4 className="text-sm font-medium text-black">
+                    {product.name}
+                  </h4>
+                  <p className="text-sm text-black">
                     ${product.price.toFixed(2)}
                   </p>
                 </div>

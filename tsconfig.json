@@ -32,7 +32,8 @@
     "src/app/Components/Footer/page.jsx",
     "src/app/Pages/Signin/page.jsx",
     "src/app/Pages/Login/page.jsx",
-    "src/app/Pages/Clinicpages/H2/page.jsx"
+    "src/app/Pages/Clinicpages/H2/page.jsx",
+    "src/app/Shop/H1/page.jsx"
   ],
   "exclude": ["node_modules"]
 }

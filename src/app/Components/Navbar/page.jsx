@@ -88,6 +88,7 @@ export default function Navbar() {
             { href: "/Home", label: "Home" },
             { href: "/Shop/H1", label: "Shop" },
             { href: "/Clinic", label: "Clinic" },
+            { href: "/Pages/PetHotel", label: "Pet Hotel" },
           ].map((link, index) => (
             <motion.div
               key={link.href}
@@ -179,6 +180,7 @@ export default function Navbar() {
                   { href: "/Home", label: "Home" },
                   { href: "/Shop/H1", label: "Shop" },
                   { href: "/Clinic", label: "Clinic" },
+                  { href: "/Pages/PetHotel", label: "Pet Hotel" },
                 ].map((link, index) => (
                   <motion.div
                     key={link.href}

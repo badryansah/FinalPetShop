@@ -4,26 +4,29 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/app/Components/Navbar/page";
 import { motion } from "framer-motion";
+import Card1 from "@/app/asset/Clinic/Card-1.png";
+import Card2 from "@/app/asset/Clinic/Card-2.png";
+import Card3 from "@/app/asset/Clinic/Card-3.png";
 
 const servicesData = [
   {
     id: 1,
     title: "Pemeriksaan Kesehatan",
-    image: "/asset/Clinic/Lynkam1.png",
+    image: Card1,
     link: "/Pages/Clinicpages/H1",
     badge: "News",
   },
   {
     id: 2,
     title: "Grooming",
-    image: "/asset/Clinic/Lynkami2.png",
+    image: Card2,
     link: "/Pages/Clinicpages/H2",
     badge: "News",
   },
   {
     id: 3,
     title: "Vaksinasi",
-    image: "/asset/Clinic/Lynkami3.png",
+    image: Card3,
     link: "/Pages/Clinicpages/H3",
     badge: "News",
   },
@@ -77,6 +80,7 @@ export default function ServicesPage() {
       >
         <motion.div className="mb-12" variants={titleVariants}>
           <h1 className="text-4xl font-bold text-center text-black">
+            {" "}
             LAYANAN <span className="text-orange-500">KAMI</span>
           </h1>
         </motion.div>

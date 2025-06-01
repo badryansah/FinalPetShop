@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.text-shadow {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.faq-icon {
+  color: #f97316;
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+  width: 20px;
+}

@@ -5,6 +5,49 @@ import Link from "next/link";
 import Sidebar from "../Sidebar/page";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Import shop assets for page 2 (1-5 only)
+import Product1 from "@/app/asset/Shopasset/image (1).png";
+import Product2 from "@/app/asset/Shopasset/image (2).png";
+import Product3 from "@/app/asset/Shopasset/image (3).png";
+import Product4 from "@/app/asset/Shopasset/image (4).png";
+import Product5 from "@/app/asset/Shopasset/image (5).png";
+
+// Define products array with 5 items
+const products = [
+  {
+    id: 1,
+    name: "Premium Cat Food",
+    price: "65.000",
+    image: Product1,
+    isNew: true,
+  },
+  {
+    id: 2,
+    name: "Premium Dog Food",
+    price: "55.000",
+    image: Product2,
+    isNew: true,
+  },
+  {
+    id: 3,
+    name: "Healthy Pet Mix",
+    price: "48.000",
+    image: Product3,
+  },
+  {
+    id: 4,
+    name: "Pet Food Special",
+    price: "52.000",
+    image: Product4,
+  },
+  {
+    id: 5,
+    name: "Complete Pet Diet",
+    price: "58.000",
+    image: Product5,
+  },
+];
+
 export default function ShopPageTwo() {
   const [currentPage, setCurrentPage] = useState(2);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -57,65 +100,6 @@ export default function ShopPageTwo() {
       },
     },
   };
-
-  const products = [
-    {
-      id: 17,
-      name: "Premium Dog Food",
-      price: "19.99",
-      image: "/images/products/growssy-dog.png",
-      isNew: true,
-    },
-    {
-      id: 18,
-      name: "Premium Cat Food",
-      price: "19.99",
-      image: "/images/products/growssy-cat.png",
-      isNew: true,
-    },
-    {
-      id: 19,
-      name: "Premium Dog Food",
-      price: "19.99",
-      image: "/images/products/gray-placeholder.png",
-    },
-    {
-      id: 20,
-      name: "Premium Dog Food",
-      price: "19.99",
-      image: "/images/products/gray-placeholder.png",
-    },
-    {
-      id: 21,
-      name: "Premium Cat Food",
-      price: "19.99",
-      image: "/images/products/gray-placeholder.png",
-    },
-    {
-      id: 22,
-      name: "Premium Dog Food",
-      price: "19.99",
-      image: "/images/products/gray-placeholder.png",
-    },
-    {
-      id: 23,
-      name: "Premium Dog Food",
-      price: "19.99",
-      image: "/images/products/gray-placeholder.png",
-    },
-    {
-      id: 24,
-      name: "Premium Cat Food",
-      price: "19.99",
-      image: "/images/products/gray-placeholder.png",
-    },
-    {
-      id: 25,
-      name: "Premium Dog Food",
-      price: "19.99",
-      image: "/images/products/gray-placeholder.png",
-    },
-  ];
 
   return (
     <div className="min-h-screen flex flex-col overflow-y-auto bg-gray-50">

@@ -5,110 +5,66 @@ import Link from "next/link";
 import Sidebar from "../Sidebar/page";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Import shop assets
+import Product1 from "@/app/asset/Shopasset/growssy_growssy_pussy_milk_-20_g_-_10_pcs-_susu_kucing_-_cat_milk_-_susu_anak_kucing_full02_46wjy5f 1.png";
+import Product2 from "@/app/asset/Shopasset/image (1).png";
+import Product3 from "@/app/asset/Shopasset/image (2).png";
+import Product4 from "@/app/asset/Shopasset/image (3).png";
+import Product5 from "@/app/asset/Shopasset/image (4).png";
+import Product6 from "@/app/asset/Shopasset/image (5).png";
+import Product7 from "@/app/asset/Shopasset/image.png";
+
+// Update products array with new images
+const products = [
+  {
+    id: 1,
+    name: "Growssy Pussy Milk",
+    price: "50.000",
+    image: Product1,
+    isNew: true,
+  },
+  {
+    id: 2,
+    name: "Premium Cat Food",
+    price: "45.000",
+    image: Product2,
+    isNew: true,
+  },
+  {
+    id: 3,
+    name: "Premium Dog Food",
+    price: "55.000",
+    image: Product3,
+  },
+  {
+    id: 4,
+    name: "Excel Premium",
+    price: "40.000",
+    image: Product4,
+  },
+  {
+    id: 5,
+    name: "Pet Food",
+    price: "35.000",
+    image: Product5,
+  },
+  {
+    id: 6,
+    name: "Premium Food",
+    price: "60.000",
+    image: Product6,
+  },
+  {
+    id: 7,
+    name: "Special Pet Food",
+    price: "48.000",
+    image: Product7,
+  },
+];
+
 export default function ShopByPetPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const products = [
-    {
-      id: 1,
-      name: "Premium Dog Food",
-      price: "19.99",
-      image: "/images/products/growssy-dog.png",
-      isNew: true,
-    },
-    {
-      id: 2,
-      name: "Premium Cat Food",
-      price: "19.99",
-      image: "/images/products/growssy-cat.png",
-      isNew: true,
-    },
-    {
-      id: 3,
-      name: "Premium Dog Food",
-      price: "19.99",
-      image: "/images/products/growssy-dog.png",
-    },
-    {
-      id: 4,
-      name: "Excel Premium",
-      price: "19.99",
-      image: "/images/products/excel.png",
-    },
-    {
-      id: 5,
-      name: "Whiskas",
-      price: "19.99",
-      image: "/images/products/whiskas-can.png",
-    },
-    {
-      id: 6,
-      name: "Whiskas Premium",
-      price: "19.99",
-      image: "/images/products/whiskas-bag.png",
-    },
-    {
-      id: 7,
-      name: "Premium Food",
-      price: "19.99",
-      image: "/images/products/cleo.png",
-    },
-    {
-      id: 8,
-      name: "KANDANG KUCING PINK SMAI",
-      price: "19.99",
-      image: "/images/products/pet-carrier.png",
-    },
-    {
-      id: 9,
-      name: "tempat makan hewan",
-      price: "19.99",
-      image: "/images/products/pet-bowl.png",
-    },
-    {
-      id: 10,
-      name: "Dog Biscuits",
-      price: "19.99",
-      image: "/images/products/dog-biscuits.png",
-    },
-    {
-      id: 11,
-      name: "Cat Litter",
-      price: "19.99",
-      image: "/images/products/cat-litter.png",
-    },
-    {
-      id: 12,
-      name: "Pet Shampoo",
-      price: "19.99",
-      image: "/images/products/pet-shampoo.png",
-    },
-    {
-      id: 13,
-      name: "Pet Toys",
-      price: "19.99",
-      image: "/images/products/pet-toys.png",
-    },
-    {
-      id: 14,
-      name: "Pet Brush",
-      price: "19.99",
-      image: "/images/products/pet-brush.png",
-    },
-    {
-      id: 15,
-      name: "Pet Collar",
-      price: "19.99",
-      image: "/images/products/pet-collar.png",
-    },
-    {
-      id: 16,
-      name: "Fish Food",
-      price: "19.99",
-      image: "/images/products/fish-food.png",
-    },
-  ];
 
   // Animation variants
   const containerVariants = {
